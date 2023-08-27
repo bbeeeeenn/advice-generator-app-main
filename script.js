@@ -30,7 +30,7 @@ function load() {
 				setTimeout(() => {
 					button.style.backgroundColor = "hsl(150, 100%, 66%)";
 					loading = false;
-				}, 1000);
+				}, 1250);
 			});
 	}
 }
