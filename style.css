@@ -113,6 +113,7 @@ picture {
    border-right: var(--border-thickness) solid var(--border-color);
    border-bottom: var(--border-thickness) solid var(--border-color);
    border-radius: 50%;
+   pointer-events: none;
    opacity: 0;
 
    transition: 0.5s;
@@ -123,7 +124,7 @@ picture {
    opacity: 1;
 }
 
-.dice:hover {
+.dice:not([style*='background-color:hsl(218, 16%, 30%)']):hover {
    box-shadow: 0 0 1rem hsl(150, 100%, 66%);
 }
 

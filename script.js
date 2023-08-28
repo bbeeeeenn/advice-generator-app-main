@@ -17,20 +17,23 @@ function load() {
 	} else {
 		contentBox.classList.add("squish");
 		button.classList.add("waiting");
-		button.style.backgroundColor = "hsl(218, 16%, 30%)";
+		button.setAttribute("style", "background-color:hsl(218, 16%, 30%)");
 		loading = true;
 		fetch("https://api.adviceslip.com/advice")
 			.then((res) => res.json())
 			.then((data) => {
-				// console.log("quote", data);
 				contentBox.classList.remove("squish");
 				adviceId.innerText = data.slip.id;
 				advice.innerText = data.slip.advice;
 				button.classList.remove("waiting");
+
 				setTimeout(() => {
-					button.style.backgroundColor = "hsl(150, 100%, 66%)";
+					button.setAttribute(
+						"style",
+						"background-color: hsl(150, 100%, 66%)"
+					);
 					loading = false;
-				}, 1250);
+				}, 1500);
 			});
 	}
 }
