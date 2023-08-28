@@ -42,10 +42,27 @@ body {
    flex-flow: column;
    width: 100%;
    opacity: 1;
-   overflow: hidden;
+   overflow-x: hidden;
+   overflow-y: scroll;
    height: 180px;
+   padding: 2px;
+   margin-right: -0.4rem;
    transform: scale(1);
    transition: transform 0.5s, width 0.5s, opacity 0.3s;
+}
+
+.content::-webkit-scrollbar {
+   background-color: transparent;
+   width: 0.4rem;
+}
+
+.content::-webkit-scrollbar-thumb {
+   border-radius: 100rem;
+   background-color: hsl(218, 26%, 19%);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+   background-color: hsl(218, 23%, 16%);
 }
 
 .content.squish {
